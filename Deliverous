@@ -15,5 +15,5 @@ piwik:
   - name: piwik-data
     path: /app/config
   links:
-  - name: mysql
-    alias: piwik-mysql
+  - name: piwik-mysql
+    alias: mysql
