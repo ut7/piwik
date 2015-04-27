@@ -3,11 +3,9 @@ piwik-mysql:
   volumes:
   - name: piwik-mysql
     path: /var/lib/mysql
-  environment:
-    MYSQL_ROOT_PASSWORD: password
 
 piwik:
-  image: cbeer/piwik
+  image: deliverous/docker-piwik
   hostname: analytics.ut7.fr
   ports:
   - ip: analytics.ut7.fr
