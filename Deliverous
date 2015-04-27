@@ -5,11 +5,11 @@ piwik-mysql:
     path: /var/lib/mysql
 
 piwik:
-  image: cbeer/piwik
+  image: deliverous/docker-piwik
   hostname: analytics.ut7.fr
   ports:
   - ip: analytics.ut7.fr
-    container_port: 9080
+    container_port: 80
     host_port: 80
   volumes:
   - name: piwik-data
