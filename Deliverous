@@ -17,3 +17,13 @@ piwik:
   links:
   - name: piwik-mysql
     alias: mysql
+
+admin:
+  image: registry.deliverous.net/deliverous/docker-bassine-deliverous:0.1.0-0
+  ports:
+  - ip: analytics.ut7.fr
+    container_port: 22
+    host_port: 22
+  links:
+  - name: piwik-mysql
+    alias: mysql
