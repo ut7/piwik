@@ -1,4 +1,4 @@
-piwik-mysql:
+mysql:
   image: mysql:5.6
   volumes:
   - name: piwik-mysql
@@ -14,9 +14,6 @@ piwik:
   volumes:
   - name: piwik-data
     path: /app/config
-  links:
-  - name: piwik-mysql
-    alias: mysql
 
 admin:
   image: registry.deliverous.net/deliverous/docker-bassine-deliverous:0.1.0-0
@@ -24,8 +21,6 @@ admin:
   - ip: analytics.ut7.fr
     container_port: 22
     host_port: 22
-  links:
-  - name: piwik-mysql
-    alias: mysql
+
   limits:
     memory: 4G
